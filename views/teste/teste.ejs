@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>teste</title>
+</head>
+<body>
+    <h2>Registros</h2>
+    <table border="1">
+      <thead>
+          <tr>
+              <td>Nome</td>
+              <td>Sobrenome</td>
+          </tr>
+      </thead>
+      <tbody>
+      <% teste.forEach(function(details) { %>
+          <tr>
+              <td><%= details.nome %></td>
+              <td><%= details.curso %></td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+    <button><a href="/teste">Novo</a></button>
+</body>
+</html>
