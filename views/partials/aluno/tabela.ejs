@@ -1,0 +1,39 @@
+<div class="tabela">
+  <table class="table">
+    <h2>Alunos cadastrados</h2>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Matrícula</th>
+        <th scope="col">Data de Nascimento</th>
+        <th scope="col">Curso</th>
+        <th scope="col">Semestre de Ingresso</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if(alunos !== null && Array.isArray(alunos)) { %>
+        <% alunos.forEach(function(aluno, idx) { %>
+          <tr>
+              <th scope="row"><%= idx + 1 %></th>
+              <td><%= aluno.nome %></td>
+              <td><%= aluno.matricula %></td>
+              <td><%= aluno.dataDeNascimento %></td>
+              <td><%= aluno.curso %></td>
+              <td><%= aluno.semestreDeIngresso %></td>
+              <td><%- include('./modal', { aluno: aluno }) %></td>
+              <td>
+                <a href="aluno/delete/<%= aluno._id %>">
+                  <img src="img/trash.svg" alt="lixo" width="20" height="20" />
+                </a>
+              </td>
+          </tr>
+          <% }) %>
+        <% } else { %>
+          <p>Ainda não existem alunos cadastrados.</p>
+        <% } %>
+    </tbody>
+  </table>
+</div>
