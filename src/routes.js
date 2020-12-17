@@ -1,8 +1,13 @@
 import express from "express";
-import campusController from "./controllers/campusController.js";
+import cursosController from "./controllers/cursosController.js";
 
 const router = express.Router();
 
-router.get("/", campusController.index);
+router.get("/", cursosController.index);
+router.get("/cursos", cursosController.get);
+router.post("/cursos", cursosController.post);
+router.get("/cursos/delete/:id", cursosController.delete);
+router.post("/cursos/update/:id", cursosController.update);
+
 
 export default router;

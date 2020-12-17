@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campus</title>
+    <title>Cursos</title>
   </head>
   <body>
     <h1 class="titulo">Cursos</h1>
@@ -11,12 +11,12 @@
     <div class="row">
         <div class="col-sm">
             <section>
-                <%- include('./partials/cadastro') %>
+                <%- include('./partials/cursos/cadastro') %>
             </section>
         </div>
         <div class="col-sm">
             <section>
-                <%- include('./partials/tabela') %>
+                <%- include('./partials/cursos/tabela', {cursos: cursos}) %>
             </section>
         </div>
     </div>
