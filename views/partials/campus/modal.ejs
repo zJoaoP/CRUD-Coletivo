@@ -31,15 +31,30 @@
       <div class="modal-body">
         <form action="/campus/update/<%= campus._id %>" method="POST">
           <div class="form-floating mb-3">
-            <input class="form-control" id="campus/nome" name="nome" />
+            <input
+              class="form-control"
+              id="campus/nome"
+              name="nome"
+              value="<%= campus.nome %>"
+            />
             <label for="floatingInput">Nome:</label>
           </div>
           <div class="form-floating mb-3">
-            <input class="form-control" id="campus/bairro" name="bairro" />
+            <input
+              class="form-control"
+              id="campus/bairro"
+              name="bairro"
+              value="<%= campus.bairro %>"
+            />
             <label for="floatingInput">Bairro:</label>
           </div>
           <div class="form-floating mb-3">
-            <input class="form-control" id="campus/cidade" name="cidade" />
+            <input
+              class="form-control"
+              id="campus/cidade"
+              name="cidade"
+              value="<%= campus.cidade %>"
+            />
             <label for="floatingInput">Cidade:</label>
           </div>
           <div class="modal-footer">
