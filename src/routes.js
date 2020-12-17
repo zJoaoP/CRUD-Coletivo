@@ -1,10 +1,8 @@
-import express from 'express'
-import testeController from './controllers/testeController.js'
+import express from "express";
+import campusController from "./controllers/campusController.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', testeController.get)
-router.post('/', testeController.post)
-router.get('/show', testeController.show)
+router.get("/", campusController.index);
 
-export default router
+export default router;
