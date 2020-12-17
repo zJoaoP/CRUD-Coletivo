@@ -1,0 +1,30 @@
+<div class="tabela">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Bairro</th>
+        <th scope="col">Cidade</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% campi.forEach(function(campus, index){ %>
+      <tr>
+        <th scope="row"><%= index %></th>
+        <td><%= campus.nome %></td>
+        <td><%= campus.bairro %></td>
+        <td><%= campus.cidade %></td>
+        <td>
+          <a href="/campus/delete/<%= campus._id %>">
+            <img src="img/trash.svg" alt="lixo" width="20" height="20" />
+          </a>
+        </td>
+        <td><%- include('./modal', {campus: campus}) %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
