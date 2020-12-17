@@ -1,13 +1,13 @@
-<<<<<<< HEAD
-import express from 'express'
-import testeController from './controllers/testeController.js'
-import disciplinasController from './controllers/disciplinasController.js'
-=======
 import express from "express";
 import campusController from "./controllers/campusController.js";
->>>>>>> 1bc541b186c8d8b1d51dd7104ed626e50c85e2e6
+import disciplinasController from "./controllers/disciplinasController.js";
 
 const router = express.Router();
 
+router.get("/", campusController.index);
+router.get('/disciplinas', disciplinasController.get);
+router.post('/disciplinas', disciplinasController.post);
+router.get('/disciplinas/delete/:id', disciplinasController.delete);
+router.post('/disciplinas/update/:id', disciplinasController.update);
 
 export default router;
