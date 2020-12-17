@@ -9,5 +9,7 @@ router.post('/', testeController.post)
 router.get('/show', testeController.show)
 router.get('/show', testeController.show)
 router.get('/disciplinas', disciplinasController.get)
+router.post('/disciplinas', disciplinasController.post)
+router.get('/disciplinas/show', disciplinasController.show)
 
 export default router

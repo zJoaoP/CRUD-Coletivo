@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>teste</title>
+</head>
+<body>
+    <h2>Registros</h2>
+    <table border="1">
+      <thead>
+          <tr>
+              <td>Nome</td>
+              <td>Carga Horaria</td>
+              <td>Professor</td>
+              <td>Limite Alunos</td>
+          </tr>
+      </thead>
+      <tbody>
+      <% disciplinas.forEach(function(details) { %>
+          <tr>
+              <td><%= details.nome %></td>
+              <td><%= details.cargaHoraria %></td>
+              <td><%= details.professor %></td>
+              <td><%= details.limiteAlunos %></td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+    <button><a href="/teste/disciplinas">Novo</a></button>
+</body>
+</html>
