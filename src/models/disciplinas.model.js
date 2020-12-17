@@ -9,6 +9,6 @@ const disciplinasSchema = new Schema({
   limiteAlunos: {type: Number, required: true}
 });
 
-const Disciplinas = mongoose.model('Disciplinas', testeSchema);
+const Disciplinas = mongoose.model('Disciplinas', disciplinasSchema);
 
 export default Disciplinas
