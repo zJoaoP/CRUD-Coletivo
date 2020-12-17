@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campus</title>
+    <title>Alunos</title>
   </head>
   <body>
-    <h1 class="titulo">Alunos</h1>
     <div class="container campus">
     <div class="row">
         <div class="col-sm">
             <section>
-                <%- include('./partials/cadastro') %>
+                <%- include('./partials/aluno/cadastro') %>
             </section>
         </div>
         <div class="col-sm">
             <section>
-                <%- include('./partials/tabela') %>
+                <%- include('./partials/aluno/tabela', { alunos: alunos }) %>
             </section>
         </div>
     </div>

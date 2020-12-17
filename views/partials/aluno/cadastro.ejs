@@ -1,0 +1,31 @@
+<div class="cadastro">
+    <h2>Cadastrar Aluno</h2>
+    <form action="/alunos" method="POST">
+    <div class="form-floating mb-3">
+        <input class="form-control" type="text"  id="nome" name="nome">
+        <label for="nome">Nome do Aluno: </label>
+    </div>
+    <div class="form-floating">
+        <input class="form-control" type="number" id="matricula" name="matricula">
+        <label for="matricula">Número de Matrícula: </label>
+    </div>
+    <br>
+    <div class="form-floating mb-3">
+        <input class="form-control" type="text"  name="curso" id="curso">
+        <label for="curso">Curso: </label>
+    </div>
+    <div >
+        <label  for="dataDeNascimento">Data de Nascimento: </label>
+        <input class="form-control" type="date" id="dataDeNascimento" name="dataDeNascimento">
+    </div>
+    <br>
+    <div class="form-floating">
+        <input class="form-control" type="number" step="0.1"  id="semestreDeIngresso" name="semestreDeIngresso">
+        <label for="semestreDeIngresso">Semestre de Ingresso: </label>
+    </div>
+    <br>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">Cadastrar</button>
+    </div>
+  </form>
+  </div>

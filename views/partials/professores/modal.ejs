@@ -1,0 +1,76 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal-<%= professor._id %>"
+>
+  <img src="img/edit.svg" alt="lixo" width="20" height="20" />
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal-<%= professor._id %>"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <h3>Altere os dados necessários</h3>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/professores/update/<%= professor._id %>" method="POST">
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="professor/nome"
+              name="nome"
+              value="<%= professor.nome %>"
+            />
+            <label for="floatingInput">Insira o nome:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="professor/titulo"
+              name="titulo"
+              value="<%= professor.titulo %>"
+            />
+            <label for="floatingInput">Insira o título:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="professor/departamento"
+              name="departamento"
+              value="<%= professor.departamento %>"
+            />
+            <label for="floatingInput">Insira o departamento:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="professor/especialidade"
+              name="especialidade"
+              value="<%= professor.especialidade %>"
+            />
+            <label for="floatingInput">Insira o especialidade:</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
