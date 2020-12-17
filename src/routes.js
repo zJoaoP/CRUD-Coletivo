@@ -1,15 +1,13 @@
+<<<<<<< HEAD
 import express from 'express'
 import testeController from './controllers/testeController.js'
 import disciplinasController from './controllers/disciplinasController.js'
+=======
+import express from "express";
+import campusController from "./controllers/campusController.js";
+>>>>>>> 1bc541b186c8d8b1d51dd7104ed626e50c85e2e6
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', testeController.get)
-router.post('/', testeController.post)
-router.get('/show', testeController.show)
-router.get('/show', testeController.show)
-router.get('/disciplinas', disciplinasController.get)
-router.post('/disciplinas', disciplinasController.post)
-router.get('/disciplinas/show', disciplinasController.show)
 
-export default router
+export default router;
