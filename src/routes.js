@@ -5,6 +5,8 @@ import disciplinasController from "./controllers/disciplinasController.js";
 import professoresController from "./controllers/professoresController.js";
 import alunoController from "./controllers/alunoController.js";
 
+import laboratorioController from "./controllers/laboratorioController.js";
+
 const router = express.Router();
 
 router.get("/", cursosController.index);
@@ -33,5 +35,10 @@ router.get('/alunos', alunoController.get);
 router.post('/alunos', alunoController.post);
 router.post('/aluno/edit/:id', alunoController.update);
 router.get('/aluno/delete/:id', alunoController.delete);
+
+router.get("/laboratorio", laboratorioController.get);
+router.post("/laboratorio", laboratorioController.post);
+router.get("/laboratorio/delete/:id", laboratorioController.delete);
+router.post("/laboratorio/update/:id", laboratorioController.update);
 
 export default router;
