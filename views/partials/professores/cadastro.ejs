@@ -1,0 +1,32 @@
+<div class="cadastro">
+  <h2>Registro de professores</h2>
+  <form action="/professores" method="POST">
+    <div class="form-floating mb-3">
+      <input class="form-control" id="professor/nome" name="nome" />
+      <label for="floatingInput">Insira o nome:</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input class="form-control" id="professor/titulo" name="titulo" />
+      <label for="floatingInput">Insira o título:</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        class="form-control"
+        id="professor/departamento"
+        name="departamento"
+      />
+      <label for="floatingInput">Insira o departamento:</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        class="form-control"
+        id="professor/especialidade"
+        name="especialidade"
+      />
+      <label for="floatingInput">Insira o especialidade:</label>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">Cadastrar</button>
+    </div>
+  </form>
+</div>
