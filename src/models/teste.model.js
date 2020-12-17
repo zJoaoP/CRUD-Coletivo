@@ -1,12 +1,12 @@
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
-const testeSchema = new Schema({
-  nome: { type: String, required: true },
-  curso: { type: String, required: true}
-});
+// const testeSchema = new Schema({
+//   nome: { type: String, required: true },
+//   curso: { type: String, required: true}
+// });
 
-const Teste = mongoose.model('Teste', testeSchema);
+// const Teste = mongoose.model('Teste', testeSchema);
 
-export default Teste
+// export default Teste
