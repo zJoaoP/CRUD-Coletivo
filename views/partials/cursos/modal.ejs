@@ -1,0 +1,85 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal-<%= cursos._id %>"
+>
+  <img src="img/edit.svg" alt="lixo" width="20" height="20" />
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal-<%= cursos._id %>"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <h3>Altere os dados necessários</h3>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/cursos/update/<%= cursos._id %>" method="POST">
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="cursos/nome"
+              name="nome"
+              value="<%= cursos.nome %>"
+            />
+            <label for="floatingInput">Nome:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="cursos/departamento"
+              name="departamento"
+              value="<%= cursos.departamento %>"
+            />
+            <label for="floatingInput">Departamento:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="cursos/cargaHoraria"
+              name="cargaHoraria"
+              value="<%= cursos.cargaHoraria %>"
+            />
+            <label for="floatingInput">Carga Horaria:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="cursos/localidade"
+              name="localidade"
+              value="<%= cursos.localidade %>"
+            />
+            <label for="floatingInput">Localidade:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="cursos/area"
+              name="area"
+              value="<%= cursos.area %>"
+            />
+            <label for="floatingInput">Área:</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

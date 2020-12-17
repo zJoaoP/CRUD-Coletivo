@@ -1,0 +1,27 @@
+<div class="tabela">
+  <table class="table">
+    <thead>
+      <h2>Campus registrados</h2>
+      <tr>
+        <td>Nome</td>
+        <td>Departamento</td>
+        <td>Carga horária</td>
+        <td>Localidade</td>
+        <td>Área de atuação</td>
+        <td>Ação</td>
+    </tr>
+    </thead>
+    <tbody>
+      <% cursos.forEach(function(cursos) { %>
+        <tr>
+            <td><%= cursos.nome %></td>
+            <td><%= cursos.departamento %></td>
+            <td><%= cursos.cargaHoraria %></td>
+            <td><%= cursos.localidade %></td>
+            <td><%= cursos.area %></td>
+            <td><%- include('./modal.ejs', {cursos: cursos}) %> - <a href="/cursos/delete/<%= cursos._id %>">Deletar</a></td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
+</div>

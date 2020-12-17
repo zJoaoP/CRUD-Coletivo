@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar .container{
+justify-content: flex-end;
+}
+
+.logo-solutis {
+    margin-left:5vw;
+}
+
+.container-fluid {
+    padding: 0;
+    
+}
+
+.altura {
+    padding: 5vw;
+    height: calc(100vh - 76px);
+}
+
+.titulo {
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1;
+top: 0;
+}
+
+.banner {
+    max-height: 100vh ;
+    max-width: 90vw;
+    z-index: 0;
+}
+
+.titulo-home {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    margin-bottom: 150px;
+}

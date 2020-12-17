@@ -1,0 +1,22 @@
+<div class="tabela">
+    <table class="table">
+      <thead>
+        <h2>Disciplinas registradas</h2>
+      </thead>
+      <tbody>
+        <% disciplinas.forEach(function(details) { %>
+            <tr>
+                <td><%= details.nome %></td>
+                <td><%= details.cargaHoraria %></td>
+                <td><%= details.professor %></td>
+                <td><%= details.limiteAlunos %></td>
+                <td><a href="/disciplinas/delete/<%= details._id %>"><img src="img/trash.svg" alt="lixo" width="20" height="20" /></a></td>
+                <td>
+                  <%- include('./modal', {disciplina: details})  %> 
+                </td>
+            </tr>
+            <% }) %>
+      </tbody>
+    </table>
+  </div>
+  

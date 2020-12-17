@@ -1,0 +1,67 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal-<%= campus._id %>"
+>
+  <img src="img/edit.svg" alt="lixo" width="20" height="20" />
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal-<%= campus._id %>"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <h3>Altere os dados necessários</h3>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/campus/update/<%= campus._id %>" method="POST">
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="campus/nome"
+              name="nome"
+              value="<%= campus.nome %>"
+            />
+            <label for="floatingInput">Nome:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="campus/bairro"
+              name="bairro"
+              value="<%= campus.bairro %>"
+            />
+            <label for="floatingInput">Bairro:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="campus/cidade"
+              name="cidade"
+              value="<%= campus.cidade %>"
+            />
+            <label for="floatingInput">Cidade:</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

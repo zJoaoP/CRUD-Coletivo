@@ -1,0 +1,32 @@
+<div class="tabela">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Título</th>
+        <th scope="col">Departamento</th>
+        <th scope="col">Especialidade</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% professores.forEach(function(professor, index){ %>
+      <tr>
+        <th scope="row"><%= index %></th>
+        <td><%= professor.nome %></td>
+        <td><%= professor.titulo %></td>
+        <td><%= professor.departamento %></td>
+        <td><%= professor.especialidade %></td>
+        <td>
+          <a href="/professores/delete/<%= professor._id %>">
+            <img src="img/trash.svg" alt="lixo" width="20" height="20" />
+          </a>
+        </td>
+        <td><%- include('./modal', {professor: professor}) %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
