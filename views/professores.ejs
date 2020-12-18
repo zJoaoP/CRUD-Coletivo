@@ -8,18 +8,11 @@
   <body>
     <h1 class="titulo">Professores</h1>
     <div class="container professor">
-    <div class="row">
-        <div class="col-sm">
-            <section>
-                <%- include('./partials/professores/cadastro') %>
-            </section>
-        </div>
-        <div class="col-sm">
-            <section>
-              <%- include('./partials/professores/tabela', { professores: professores }) %>
-            </section>
-        </div>
+      <section>
+        <%- include('./partials/professores/tabela', { professores: professores
+        }) %>
+      </section>
+      <%- include('./partials/professores/cadastro') %>
     </div>
   </body>
 </html>
-

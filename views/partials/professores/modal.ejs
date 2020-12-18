@@ -37,16 +37,15 @@
               name="nome"
               value="<%= professor.nome %>"
             />
-            <label for="floatingInput">Insira o nome:</label>
+            <label for="floatingInput">Nome</label>
           </div>
-          <div class="form-floating mb-3">
-            <input
-              class="form-control"
-              id="professor/titulo"
-              name="titulo"
-              value="<%= professor.titulo %>"
-            />
-            <label for="floatingInput">Insira o título:</label>
+          <div class="form-group form-floating mb-3">
+            <select class="form-control" id="tituloSelect" , name="titulo">
+              <option>Graduação</option>
+              <option>Mestrado</option>
+              <option>Doutorado</option>
+            </select>
+            <label for="tituloSelect">Título</label>
           </div>
           <div class="form-floating mb-3">
             <input
@@ -55,7 +54,7 @@
               name="departamento"
               value="<%= professor.departamento %>"
             />
-            <label for="floatingInput">Insira o departamento:</label>
+            <label for="floatingInput">Departamento</label>
           </div>
           <div class="form-floating mb-3">
             <input
@@ -64,7 +63,7 @@
               name="especialidade"
               value="<%= professor.especialidade %>"
             />
-            <label for="floatingInput">Insira o especialidade:</label>
+            <label for="floatingInput">Especialidade</label>
           </div>
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary">Salvar</button>
