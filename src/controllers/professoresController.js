@@ -13,12 +13,14 @@ export default {
     const titulo = req.body.titulo;
     const departamento = req.body.departamento;
     const especialidade = req.body.especialidade;
+    const nacionalidade = req.body.nacionalidade;
 
     const professor = new Professor({
       nome: nome,
       titulo: titulo,
       departamento: departamento,
       especialidade: especialidade,
+      nacionalidade: nacionalidade,
     });
 
     professor
@@ -43,6 +45,7 @@ export default {
     const titulo = req.body.titulo;
     const departamento = req.body.departamento;
     const especialidade = req.body.especialidade;
+    const nacionalidade = req.body.nacionalidade;
     Professor.updateOne(
       { _id: id },
       {
@@ -50,6 +53,7 @@ export default {
         titulo: titulo,
         departamento: departamento,
         especialidade: especialidade,
+        nacionalidade: nacionalidade,
       },
       function (err) {
         if (err) console.error(err);
