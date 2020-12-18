@@ -7,9 +7,10 @@ const alunoSchema = new Schema({
   matricula: { type: Number, required: true},
   curso: { type: String, required: true},
   dataDeNascimento: { type: String, required: true },
-  semestreDeIngresso: { type: Number }
+  semestreDeIngresso: { type: Number}
 });
 
 const Aluno = mongoose.model('Aluno', alunoSchema);
+
 
 export default Aluno

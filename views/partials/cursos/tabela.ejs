@@ -19,8 +19,10 @@
             <td><%= cursos.cargaHoraria %></td>
             <td><%= cursos.localidade %></td>
             <td><%= cursos.area %></td>
-            <td><%- include('./modal.ejs', {cursos: cursos}) %> - <a href="/cursos/delete/<%= cursos._id %>">Deletar</a></td>
+            <td><%- include('./modal.ejs', {cursos: cursos}) %> 
+              <td><a href="/cursos/delete/<%= cursos._id %>"> <img src="img/trash.svg" alt="lixo" width="20" height="20" /></a></td></td>
         </tr>
+       
         <% }) %>
     </tbody>
   </table>
