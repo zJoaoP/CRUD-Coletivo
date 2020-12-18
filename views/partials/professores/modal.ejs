@@ -32,23 +32,45 @@
       </div>
       <div class="modal-body">
         <form action="/professores/update/<%= professor._id %>" method="POST">
-          <div class="form-floating mb-3">
-            <input
-              class="form-control"
-              id="professor/nome"
-              name="nome"
-              value="<%= professor.nome %>"
-            />
-            <label for="floatingInput">Nome</label>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="professor/nome"
+                  name="nome"
+                  value="<%= professor.nome %>"
+                />
+                <label for="floatingInput">Nome</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-floating mb-3">
+                <select
+                  class="form-control"
+                  id="nacionalidadeSelect"
+                  name="nacionalidade"
+                >
+                  <option selected disabled>
+                    <%= professor.nacionalidade %>
+                  </option>
+                  <option>Brasileira</option>
+                  <option>Outra</option>
+                </select>
+                <label for="nacionalidadeSelect">Nacionalidade</label>
+              </div>
+            </div>
           </div>
           <div class="form-group form-floating mb-3">
-            <select class="form-control" id="tituloSelect" , name="titulo">
+            <select class="form-control" id="tituloSelect" name="titulo">
+              <option selected disabled><%= professor.titulo %></option>
               <option>Graduação</option>
               <option>Mestrado</option>
               <option>Doutorado</option>
             </select>
             <label for="tituloSelect">Título</label>
           </div>
+
           <div class="form-floating mb-3">
             <input
               class="form-control"
@@ -56,8 +78,9 @@
               name="departamento"
               value="<%= professor.departamento %>"
             />
-            <label for="floatingInput">Departamento</label>
+            <label for="floatingInput">Departamento:</label>
           </div>
+
           <div class="form-floating mb-3">
             <input
               class="form-control"
@@ -65,10 +88,11 @@
               name="especialidade"
               value="<%= professor.especialidade %>"
             />
-            <label for="floatingInput">Especialidade</label>
+            <label for="floatingInput">Especialidade:</label>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Salvar</button>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">Atualizar</button>
           </div>
         </form>
       </div>
