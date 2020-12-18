@@ -15,70 +15,71 @@
                 <form action="/alunos" method="POST">
                     <div class="row">
                         <div class="form-floating mb-3 col-md-8">
-                            <input class="form-control" type="text" id="nome" name="nome">
-                            <label for="nome">Nome do Aluno: </label>
+                            <input class="form-control" type="text" id="nome" name="nome" required>
+                            <label for="nome">* Nome do Aluno: </label>
                         </div>
                         <div class="form-floating mb-3 col-md-4">
-                            <input class="form-control" type="number" id="matricula" name="matricula">
-                            <label for="matricula">Número de Matrícula: </label>
+                            <input class="form-control" type="number" id="matricula" name="matricula" required>
+                            <label for="matricula">* Número de Matrícula: </label>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="form-floating mb-3 col-md-6">
-                            <input class="form-control" type="text" name="curso" id="curso">
-                            <label for="curso">Curso: </label>
+                        <div class="form-floating mb-3 col-md-8">
+                            <input class="form-control" type="text" name="curso" id="curso" required>
+                            <label for="curso">* Curso: </label>
                         </div>
-                        <div class="mb-3 col-md-6 d-flex">
-                            <label for="dataDeNascimento" class="col-form-label">Data de Nascimento: </label>
-                            <input class="form-control mb-3" type="date" id="dataDeNascimento" name="dataDeNascimento">
+                        <div class="form-floating mb-3 col-md-4 d-flex">
+                            
+                            <input class="form-control mb-3" type="date" id="dataDeNascimento" name="dataDeNascimento" required>
+                            <label for="dataDeNascimento" class="col-form-label">* Data de Nascimento: </label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-floating col-4 mb-3">
                             <input class="form-control" type="number" step="0.1" id="semestreDeIngresso"
-                                name="semestreDeIngresso" >
-                            <label for="semestreDeIngresso" onchange="/js/mascaraMatricula">Semestre de Ingresso: </label>
+                                name="semestreDeIngresso" required>
+                            <label for="semestreDeIngresso" onChange="/js/mascaraMatricula">* Semestre de Ingresso: </label>
                         </div>
                         <div class="form-floating  col-4 mb-3">
-                            <input class="form-control" type="text" id="CPF" name="CPF">
-                            <label for="CPF">CPF: </label>
+                            <input class="form-control" type="text" id="CPF" name="CPF" required>
+                            <label for="CPF">* CPF: </label>
                         </div>
                         <div class="form-floating  col-4 mb-3">
-                            <input class="form-control" type="text" id="RG" name="RG">
-                            <label for="RG">RG: </label>
+                            <input class="form-control" type="text" id="RG" name="RG" required>
+                            <label for="RG">* RG: </label>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="form-floating col-4 mb-3">
-                            <input class="form-control" type="text" id="tituloEleitor" name="tituloEleitor">
+                            <input class="form-control" type="text" id="tituloEleitor" name="tituloEleitor" required>
                             <label for="tituloEleitor">Título de Eleitor: </label>
                         </div>
                         <div class="form-floating col-4 mb-3">
-                            <select class="form-select" id="estadoCivil" name="estadoCivil">
+                            <select class="form-select" id="estadoCivil" name="estadoCivil" required>
                                 <option value="Solteiro">Solteiro</option>
                                 <option value="Casado">Casado</option>
                                 <option value="Divorciado">Divorciado</option>
                                 <option value="Viúvo">Viúvo</option>
                             </select>
-                            <label for="estadoCivil">Estado Civil: </label>
+                            <label for="estadoCivil">* Estado Civil: </label>
                         </div>
                         <div class="form-floating col-4 mb-3">
-                            <input class="form-control" type="text" id="UF" name="UF">
-                            <label for="UF">UF: </label>
+                            <input class="form-control" type="text" id="UF" name="UF" required>
+                            <label for="UF">* UF: </label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-floating col-6 mb-3">
-                            <input class="form-control" type="text" id="cidade" name="cidade">
-                            <label for="cidade">Cidade: </label>
+                            <input class="form-control" type="text" id="cidade" name="cidade" required>
+                            <label for="cidade">* Cidade: </label>
                         </div>
                         <div class="form-floating col-6 mb-3">
-                            <input class="form-control" type="text" id="endereco" name="endereco">
-                            <label for="endereco">Endereço: </label>
+                            <input class="form-control" type="text" id="endereco" name="endereco" required>
+                            <label for="endereco">* Endereço: </label>
                         </div>
                     </div>
 
