@@ -10,14 +10,16 @@
     <div class="row">
         <div class="col-sm">
             <section>
-                <%- include('./partials/aluno/cadastro') %>
-            </section>
-        </div>
-        <div class="col-sm">
-            <section>
                 <%- include('./partials/aluno/tabela', { alunos: alunos }) %>
             </section>
         </div>
+    </div>
+    <div class="row">
+      <div class="float-right">
+        <section>
+            <%- include('./partials/aluno/cadastro') %>
+        </section>
+    </div>
     </div>
   </body>
 </html>

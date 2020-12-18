@@ -9,14 +9,34 @@ export default {
 
     post(req, res) {
         
-        const { nome, matricula, curso, dataDeNascimento, semestreDeIngresso } = req.body
+        const { 
+                nome, 
+                matricula, 
+                curso, 
+                dataDeNascimento, 
+                semestreDeIngresso, 
+                CPF, 
+                RG, 
+                tituloEleitor, 
+                estadoCivil,
+                UF, 
+                cidade, 
+                endereco
+            } = req.body
 
         const newAluno = new Aluno({
             nome,
             matricula,
             curso,
             dataDeNascimento,
-            semestreDeIngresso
+            semestreDeIngresso,
+            CPF,
+            RG,
+            tituloEleitor,
+            estadoCivil,
+            UF,
+            cidade,
+            endereco
         })
     
         newAluno.save()
@@ -35,6 +55,13 @@ export default {
             aluno.dataDeNascimento = req.body.dataDeNascimento ? req.body.dataDeNascimento : aluno.dataDeNascimento
             aluno.curso = req.body.curso
             aluno.semestreDeIngresso = Number(req.body.semestreDeIngresso)
+            aluno.CPF = req.body.CPF,
+            aluno.RG = req.body.RG,
+            aluno.tituloEleitor = req.body.tituloEleitor,
+            aluno.estadoCivil = req.body.estadoCivil,
+            aluno.UF = req.body.UF,
+            aluno.cidade = req.body.cidade,
+            aluno.endereco = req.body.endereco
 
             aluno.save()
               .then(() => res.redirect('/alunos'))

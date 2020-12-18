@@ -9,8 +9,13 @@
         <th scope="col">Data de Nascimento</th>
         <th scope="col">Curso</th>
         <th scope="col">Semestre de Ingresso</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Deletar</th>
+        <th scope="col">CPF</th>
+        <th scope="col">RG</th>
+        <th scope="col">Título de Eleitor</th>
+        <th scope="col">Estado Civil</th>
+        <th scope="col">UF</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Endereço</th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +28,13 @@
               <td><%= aluno.dataDeNascimento %></td>
               <td><%= aluno.curso %></td>
               <td><%= aluno.semestreDeIngresso %></td>
+              <td><%= aluno.CPF %></td>
+              <td><%= aluno.RG %></td>
+              <td><%= aluno.tituloEleitor %></td>
+              <td><%= aluno.estadoCivil %></td>
+              <td><%= aluno.UF %></td>
+              <td><%= aluno.cidade %></td>
+              <td><%= aluno.endereco %></td>
               <td><%- include('./modal', { aluno: aluno }) %></td>
               <td>
                 <a href="aluno/delete/<%= aluno._id %>">
