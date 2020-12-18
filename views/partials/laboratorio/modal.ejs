@@ -1,0 +1,67 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal-<%= labo._id %>"
+>
+  <img src="img/edit.svg" alt="lixo" width="20" height="20" />
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal-<%= labo._id %>"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <h3>Altere os dados necessários</h3>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/laboratorio/update/<%= labo._id %>" method="POST">
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="labo/sala"
+              name="sala"
+              value="<%= labo.sala %>"
+            />
+            <label for="floatingInput">Sala:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="labo/professor"
+              name="professor"
+              value="<%= labo.professor %>"
+            />
+            <label for="floatingInput">Professor:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="labo/turno"
+              name="turno"
+              value="<%= labo.turno %>"
+            />
+            <label for="floatingInput">Turno:</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
