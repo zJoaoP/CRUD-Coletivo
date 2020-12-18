@@ -12,15 +12,28 @@ export default {
     const nome = req.body.nome
     const departamento = req.body.departamento
     const cargaHoraria = req.body.cargaHoraria
-    const localidade = req.body.localidade
+    const cidade = req.body.cidade
+    const estado = req.body.estado
     const area = req.body.area
+
+    
+    const bairro = req.body.bairro
+    const tipo = req.body.tipo
+    const turno = req.body.turno
+    const duracao = req.body.duracao
 
     const newCurso = new Curso({
         nome: nome,
         departamento: departamento,
         cargaHoraria: cargaHoraria,
-        localidade: localidade,
+        cidade: cidade,
+        estado: estado,
         area: area,
+        bairro: bairro,
+        
+        tipo: tipo,
+        turno: turno,
+        duracao: duracao,
     })
 
     newCurso.save()
@@ -40,14 +53,29 @@ export default {
   },
   update(req, res) {
     const id = req.params.id;
-    const nome = req.body.nome;
-    const departamento = req.body.departamento;
-    const cargaHoraria = req.body.cargaHoraria;
-    const localidade = req.body.localidade;
-    const area = req.body.area;
+    const nome = req.body.nome
+    const departamento = req.body.departamento
+    const cargaHoraria = req.body.cargaHoraria
+    const cidade = req.body.cidade
+    const area = req.body.area
+
+    const estado = req.body.estado
+    const bairro = req.body.bairro
+    const tipo = req.body.tipo
+    const turno = req.body.turno
+    const duracao = req.body.duracao
     Curso.updateOne(
       { _id: id },
-      { nome: nome, departamento: departamento, cargaHoraria: cargaHoraria, localidade: localidade, area: area },
+      { nome: nome,
+        departamento: departamento,
+        cargaHoraria: cargaHoraria,
+        cidade: cidade,
+        area: area,
+        bairro: bairro,
+        estado: estado,
+        tipo: tipo,
+        turno: turno,
+        duracao: duracao, },
       function (err) {
         if (err) console.error(err);
         res.redirect("/cursos");
