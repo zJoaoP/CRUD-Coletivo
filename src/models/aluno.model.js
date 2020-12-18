@@ -19,4 +19,5 @@ const alunoSchema = new Schema({
 
 const Aluno = mongoose.model('Aluno', alunoSchema);
 
+
 export default Aluno
