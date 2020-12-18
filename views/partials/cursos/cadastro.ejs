@@ -1,28 +1,82 @@
 <div class="cadastro">
   <h2>Registre o Curso</h2>
   <form action="/cursos" method="POST">
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="curso/nome" name='nome'>
-    <label for="floatingInput">Insira o nome do curso:</label>
-  </div>
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="curso/departamento" name='departamento'>
-    <label for="floatingInput">Insira o departamento:</label>
-  </div>
-  <div class="form-floating mb-3">
-    <input type="number" class="form-control" id="curso/cargaHoraria" name='cargaHoraria'>
-    <label for="floatingInput">Insira a carga horária:</label>
-  </div>
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="curso/localidade" name='localidade'>
-    <label for="floatingInput">Insira a localidade do campus:</label>
-  </div>
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="curso/area" name='area'>
-    <label for="floatingInput">Insira a área de atuação:</label>
-  </div>
-  <div class="d-grid gap-2">
-    <button class="btn btn-primary" type="submit">Cadastrar</button>
-  </div>
-</form>
+    <div class="form-floating mb-3" id="nome">
+      <input type="text" class="form-control" id="curso/nome" name='nome'>
+      <label for="floatingInput">Insira o nome do curso:</label>
+    </div>
+    <div class="form-floating mb-3" id="departamento">
+      <input type="text" class="form-control" id="curso/departamento" name='departamento'>
+      <label for="floatingInput">Insira o departamento:</label>
+    </div>
+    <div class="form-floating mb-3" id="cidade">
+      <input type="text" class="form-control" id="curso/cidade" name='cidade'>
+      <label for="floatingInput">Insira a cidade do campus:</label>
+    </div>
+    <div class="form-floating mb-3" id="estado">
+      <input type="text" class="form-control" id="curso/estado" name='estado'>
+      <label for="floatingInput">Insira o estado do campus:</label>
+    </div>
+    <div class="form-floating mb-3" id="bairro">
+      <input type="text" class="form-control" id="curso/bairro" name='bairro'>
+      <label for="floatingInput">Insira o bairro do campus:</label>
+    </div>
+
+    <div class="form-floating mb-3  d-none" id="cargaHoraria">
+      <input type="number" class="form-control" id="curso/cargaHoraria" name='cargaHoraria'>
+      <label for="floatingInput">Insira a carga horária:</label>
+    </div>
+    <div class="form-floating mb-3 d-none" id="area" >
+      <input type="text" class="form-control" id="curso/area" name='area'>
+      <label for="floatingInput">Insira a área de atuação:</label>
+    </div>
+    <div class="form-floating mb-3 d-none" id="turno" >
+      <input type="text" class="form-control" id="curso/turno" name='turno'>
+      <label for="floatingInput">Insira o turno:</label>
+    </div>
+    <div class="form-floating mb-3 d-none" id="tipo" >
+      <input type="text" class="form-control" id="curso/tipo" name='tipo'>
+      <label for="floatingInput">Insira o tipo:</label>
+    </div>
+    <div class="form-floating mb-3 d-none" id="duracao" >
+      <input type="number" class="form-control" id="curso/duracao" name='duracao'>
+      <label for="floatingInput">Insira a duração:</label>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button" id="btn-continuar" onclick="continuar();">Continuar</button>
+      <button class="btn btn-primary d-none" type="submit" id="btn-enviar">Enviar</button>
+    </div>
+  </form>
 </div>
+
+<script>
+  function continuar(){
+      var nome = document.getElementById("nome");
+      var departamento = document.getElementById("departamento");
+      var cidade = document.getElementById("cidade");
+      var estado = document.getElementById("estado");
+      var bairro = document.getElementById("bairro");
+      var btn_continuar = document.getElementById("btn-continuar");
+
+      var cargaHoraria = document.getElementById("cargaHoraria");
+      var area = document.getElementById("area");
+      var turno = document.getElementById("turno");
+      var tipo = document.getElementById("tipo");
+      var duracao = document.getElementById("duracao");
+      var btn_enviar = document.getElementById("btn-enviar");
+
+      nome.classList.add('d-none');
+      departamento.classList.add('d-none');
+      cidade.classList.add('d-none');
+      estado.classList.add('d-none');
+      bairro.classList.add('d-none');
+      btn_continuar.classList.add('d-none');
+
+      cargaHoraria.classList.remove('d-none');
+      area.classList.remove('d-none');
+      turno.classList.remove('d-none');
+      tipo.classList.remove('d-none');
+      duracao.classList.remove('d-none');
+      btn_enviar.classList.remove('d-none');
+    }
+</script>

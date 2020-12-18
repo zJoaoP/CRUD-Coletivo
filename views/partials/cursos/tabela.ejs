@@ -5,9 +5,16 @@
       <tr>
         <td>Nome</td>
         <td>Departamento</td>
-        <td>Carga horária</td>
-        <td>Localidade</td>
+        
+        <td>Cidade</td>
+        <td>Estado</td>
+        <td>Bairro</td>
+
+        <td>Carga horária (horas)</td>
         <td>Área de atuação</td>
+        <td>Turno</td>
+        <td>Tipo</td>
+        <td>Duração (semestres)</td>
         <td>Ação</td>
     </tr>
     </thead>
@@ -16,11 +23,17 @@
         <tr>
             <td><%= cursos.nome %></td>
             <td><%= cursos.departamento %></td>
+            <td><%= cursos.cidade %></td>
+            <td><%= cursos.estado %></td>
+            <td><%= cursos.bairro %></td>
+
             <td><%= cursos.cargaHoraria %></td>
-            <td><%= cursos.localidade %></td>
             <td><%= cursos.area %></td>
-            <td><%- include('./modal.ejs', {cursos: cursos}) %> 
-              <td><a href="/cursos/delete/<%= cursos._id %>"> <img src="img/trash.svg" alt="lixo" width="20" height="20" /></a></td></td>
+            <td><%= cursos.turno %></td>
+            <td><%= cursos.tipo %></td>
+            <td><%= cursos.duracao %></td>
+            
+            <td><%- include('./modal.ejs', {cursos: cursos}) %> - <a href="/cursos/delete/<%= cursos._id %>">Deletar</a></td>
         </tr>
        
         <% }) %>
